@@ -1,0 +1,27 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: cherry-consul-productor
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: consul-productor
+      # http://localhost:8500/ui/dc1/kv  设置k/v
+      # key：config/consul-productor-dev/data
+      # config对应prefix设置，consul-productor对应defaulContext设置，consul-productor与dev之间的连接符对应profile-separator设置，data-key一般默认为data
+      # value：yaml格式 对应format设置
+      # enabled： true 开启config
+      config:
+        enabled: true
+        format: yaml
+        prefix: config
+        defaultContext: consul-productor
+        profile-separator: '-'
+        data-key: data
+
+

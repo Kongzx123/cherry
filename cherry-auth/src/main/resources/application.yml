@@ -1,0 +1,13 @@
+server:
+  port: 3001
+spring:
+  application:
+    name: cherry-auth
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: consul-auth
+        # register: false  #设为false代表不注册到注册中心
+
