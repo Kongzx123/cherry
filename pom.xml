@@ -50,6 +50,7 @@
     <modules>
         <module>cherry-consul</module>
         <module>cherry-auth</module>
+        <module>cherry-rabbitmq</module>
         <module>cherry-consul-consumer</module>
     </modules>
     <build>

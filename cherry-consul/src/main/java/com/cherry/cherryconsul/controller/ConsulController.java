@@ -16,11 +16,11 @@ public class ConsulController {
     @Value("${server.port}")
     String port;
 
-    @Value("${foo.bar}")
+    /*@Value("${foo.bar}")
     String foo;
 
     @GetMapping("/hi")
     public String home(@RequestParam(defaultValue = "consul") String name) {
         return "hi "+name+",i am from port:" +port+",foo="+foo;
-    }
+    }*/
 }
